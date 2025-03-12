@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Arknights game portal links">
+    <title>Arknights Official Portals</title>
+    <link rel="icon" type="image/png" href="https://ak.hypergryph.com/favicon.ico">
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --confirm-green: #28a745;
+            --hover-dark-blue: #0056b3;
+            --hover-dark-green: #218838;
+            --text-white: #ffffff;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .link-container {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .portal-link {
+            display: block;
+            padding: 18px 30px;
+            margin: 15px auto;
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .portal-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        #special-link {
+            background-color: var(--confirm-green);
+        }
+
+        .portal-link.blue:hover {
+            background-color: var(--hover-dark-blue);
+        }
+
+        #special-link:hover {
+            background-color: var(--hover-dark-green);
+        }
+
+        .copyright {
+            position: fixed;
+            bottom: 20px;
+            color: #95a5a6;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .portal-link {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Arknights Portals</h1>
+        <p class="subtitle">Official Game Access Points</p>
+    </div>
+
+    <div class="link-container">
+        <a class="portal-link blue" 
+           href="https://ak.hypergryph.com"
+           target="_blank"
+           rel="noopener noreferrer">
+            CN Official Website
+        </a>
+        
+        <a class="portal-link blue" 
+           href="https://www.arknights.global"
+           target="_blank"
+           rel="noopener noreferrer">
+            Global Version (Headless)
+        </a>
+
+        <a class="portal-link" 
+           id="special-link"
+           href="#"
+           onclick="handleSpecialClick(event)">
+            Special Access
+        </a>
+    </div>
+
+    <p class="copyright">
+        © 2024 Arknights Portals. Not affiliated with Hypergryph/Studio Montagne
+    </p>
+
+    <script>
+        function handleSpecialClick(event) {
+            event.preventDefault();
+            const confirmation = confirm("You're accessing an external platform. Continue?");
+            if (confirmation) {
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+        }
+
+        // Add smooth transition on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = 0;
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = 1;
+            }, 100);
+        });
+    </script>
+</body>
+</html>
